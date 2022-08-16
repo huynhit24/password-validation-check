@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    cursor: url('hater.png'), url('hater.png'), url('hater.png'), auto;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    background: rgba(243, 241, 241, 0.05);
+    border: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.box .inputBox {
+    position: relative;
+    width: 100%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.box .inputBox input {
+    position: relative;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 16px 16px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+#username {
+    margin-bottom: 16px;
+}
+
+#submit {
+    width: 30%;
+    margin: 30px auto;
+    display: block;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+#submit:hover {
+    cursor: pointer;
+}
+
+.box .inputBox #toggleBtn {
+    position: absolute;
+    top: 76px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .inputBox #toggleBtn::before {
+    content: '\f06e';
+    font-family: fontAwesome;
+}
+
+.box .inputBox #toggleBtn.hide::before {
+    content: '\f070';
+}
+
+.box-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .box-img .img-user {
+    bottom: 450px;
+    position: absolute;
+    width: auto;
+    height: 30%;
+    display: inline-block;
+}
+
+.validation {
+    background: rgba(red, green, blue, alpha);
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    display: block;
+    align-items: center;
+    text-align: left;
+}
+
+.validation ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.validation ul li {
+    position: relative;
+    list-style: none;
+    color: #fff;
+    font-size: 0.85em;
+    transition: 0.5s;
+}
+
+.validation ul li.valid {
+    color: greenyellow;
+    font-weight: bold;
+}
+
+.validation ul li::before {
+    content: '\f192';
+    width: 20px;
+    height: 10px;
+    font-family: fontAwesome;
+    display: inline-flex;
+}
+
+.validation ul li.valid::before {
+    content: '\f00c';
+    color: red;
+    font-weight: bold;
+}
